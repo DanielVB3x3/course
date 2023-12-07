@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8" />
+        <title>Technology, Society and Nature.</title>    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="onlineCourse-signUp.style.css"/>
+        <script src="onlineCourse-signUp.script.js"></script>
+        <link rel="stylesheet" href="LibreBaskerville-Bold.ttf">
+
+        <title>Technology, Society and Nature/Modules.</title>    
+            
+    </head>
+    <body>
+        
+        <header class="header">
+
+            <a href="onlineCourse-home.html" class="header-home"><strong>HOME</strong></a>
+
+            <nav>
+                <ul class="menu">
+
+                    <li class="computer"><a href="onlineCourse-modules.html">Modules</a></li>
+                    <li class="computer"><a href="onlineCourse-objectives.html">Objectives</a></li>
+                    <li class="computer"><a href="onlineCourse-aboutUs.html">About Us</a></li>
+
+                </ul>      
+                            
+            </nav>
+    
+            <div class="dropdown" style="float:right;">
+                    
+                <button type="menu" id="menu" name="menu" class="dropbtn"><strong class="mobile">Menu</strong><strong class="computer">Login</strong></button> 
+
+                <div class="dropdown-content" style="right:0;">
+
+                    <a class="mobile" href="onlineCourse-modules.html">Modules</a>
+                    <a class="mobile" href="onlineCourse-objectives.html">Objectives</a>
+                    <a class="mobile" href="onlineCourse-aboutUs.html">About Us</a>
+                    <a class="loginOnMenu" href="onlineCourse-login.html">Login</a>
+                    <a href="onlineCourse-SingUp.html">Sign Up</a>
+
+                </div>
+            </div>       
+            
+        </header>
+   
+    
+            <form action="singUp" method="post">
+
+                <fieldset>
+
+                    <div class="myForm"><label for="firstName"><strong>First Name:</strong></label><input type="text" id="firstName" placeholder="" ></div>
+                    <br/>        
+                    <div class="myForm"><label for="lastName"><strong>Last Name:</strong></label><input type="text" id="lastName" placeholder="" value=></div>
+                    <br/>   
+                    <div class="myForm"><label for="birthDate"><strong>Birth Date:</strong></label><input type="date" id="birthDate" placeholder="" value=""></div>
+                    <br/>   
+                    
+                    <div class="myForm"><label for="Gender"><strong>Gender:</strong></label>
+                    <label for="">Female</label><input type="radio" id="female" value="female"/>
+                    <label for="">Male</label><input type="radio" id="male" value="female"/>
+                    <label for="">Other</label><input type="radio" id="other" value="other"/></div>
+                    <br/>
+                    <div class="myForm"><email><strong>E-mail:</strong></email><input type="email" id="email" value=""/></div>
+                    <br/>
+                    <div class="myForm"><label for="password"><strong>Password:</strong></label><input type="password" id="password" value=""/></div>
+                    <br/>
+                    <div class="myForm"><label for="confirmPassword"><strong>Confirm Password:</strong></label><input type="password" id="password" value=""/></div>
+                    <br/>
+                    <button type="submit" id="signUp" onClick="alert()">Submit</button>
+
+                </fieldset>
+            </form>    
+                      
+            
+
+
+        <footer>
+            <strong>Contact Us:</strong><br/><a href="/"><em>name.lastname@myy.haaga-helia.fi</em></a>
+
+        </footer>
+    
+    </body>
+</html>

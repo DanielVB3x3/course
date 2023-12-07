@@ -1,0 +1,271 @@
+/* Part 1: This first set of code will be displayed in every page.*/
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+
+body,
+ul,
+li,
+p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1em;
+}
+
+.computer{
+    display: none;
+}
+
+body{
+    background-color: #96B2FF;
+}
+
+h2{
+    color: #023E8A;
+}
+
+/*the header will be displayed as a flexbox and the content will be in Grid */
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    text-decoration-color: #FF6EC7;
+}
+
+.header{
+    display: flex;
+    flex-basis: auto auto auto;
+    justify-content: space-between;
+    padding-left: 1em;
+    align-items: normal;
+    max-width: 100%;
+    background-color: #05396B;
+    z-index: 1;
+    
+}
+
+.header-home{ 
+    padding: 2em;
+}
+
+.menu{
+    padding-top: 2em;
+    display: flex;
+    flex-basis: 100%;
+    flex-basis: content;
+}
+
+.menu li{
+    justify-content: space-between;
+    margin-left: 6em;
+    margin-right: 6em;
+}
+
+.menu li a{
+    display: inline-block;
+      
+}
+
+/*The menu button is displayed when opened with MOBILE, but will be replaced by a Login button when
+displayed in larger screens.*/
+
+.dropbtn{
+    background-color: #FF6EC7; 
+    color: whitesmoke;
+    margin-right: 0.8em;
+    padding: 1em;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+  
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #FFF9E9;
+    justify-content: center;
+    text-align: center;
+    min-width: 7.5em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}    
+.dropdown{
+    background-color: #05396B;
+    color: white;
+    padding: 1em;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content a {
+  color: black;
+  background-color: #FFF9E9;
+  justify-content: center;
+  padding: 1em 1em;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #0077B6;}
+
+footer{
+    position: static;
+    width: 100%;
+    height: 8vh;
+    background-color: #90E0EF;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+em{
+    color: black;
+}
+
+/* Part 2: this is the starting point for the particular code for every page.*/
+
+.main-content{
+    padding-bottom: 10%;
+    
+}
+.main-pic{
+    
+    padding-top: 10%;
+    position: relative;
+    display: grid;
+    
+}
+.main-img{
+    max-width: 100%;
+    position: relative;
+}
+
+.main-h1{
+    font-size: 2.8em;
+    max-width: 100%;
+    color: #F01C9C;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5); 
+    margin-top: 10%;
+    padding-top: 10%;
+    padding-left: 0.7em;
+}
+
+.main-picText{
+    font-size: 1.2em;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5); 
+    color:whitesmoke;
+    position: absolute;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    margin-top: 90%;
+    bottom: 0em;
+}
+
+.main-text{
+    border-style: hidden;
+    color: rgb(34, 34, 92);
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 6em;
+}
+
+
+/*This snippet of code will be displayed in tablets and computers.*/
+
+@media only screen and ( min-width: 768px) {
+    
+
+    .computer{
+        display: inline-block;
+    }
+
+    .mobile{
+        display: none;
+   }
+
+   .dropdown-content .mobile{
+        display: none;
+   }
+
+    a.mobile{
+    display: none;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: auto 25% 8% 40% auto;
+        grid-template-rows: 10% auto 10%;
+    }
+
+    .item1{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        
+    }
+
+    .item2{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin-top: 15%;
+        display: block;
+        font-size: 1.2em;
+    }
+
+    .main-img{
+        
+        box-shadow: 10px 15px #FFC2CD;
+        /*box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2), 0 18px 60px 0 rgba(0, 0, 0, 0.19);*/
+    }
+
+    .main-picText{
+        margin-bottom: 5.3em;
+        margin-top: auto;
+    }
+
+}
+/*Colors #FFB400 orange, #FFF9E9 Beige , #5A8100 Swampgreen, #FF6C02 */
+/*Colors #239148
+#89ad3f
+#096191 Navy
+#f29416
+#ffe13b
+
+.main{
+    display: grid;
+
+}
+
+.loginOnmenu{
+    display: none;
+}
+.login{
+    background-color: #5A8100;
+    color: whitesmoke;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+}

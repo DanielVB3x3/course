@@ -1,0 +1,345 @@
+
+/* Part 1: This first set of code will be displayed in every page.*/
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+
+body,
+ul,
+li,
+p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1em;
+    
+}
+
+p{
+    text-indent: 3em;
+}
+
+body{
+    background-color: #96B2FF;
+}
+
+h2{
+    color: #023E8A;
+}
+
+/*the header will be displayed as a flexbox and the content will be in Grid */
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    text-decoration-color: #FF6EC7;
+}
+
+.header{
+    display: flex;
+    flex-basis: auto auto auto;
+    justify-content: space-between;
+    padding-left: 1em;
+    align-items: normal;
+    max-width: 100%;
+    background-color: #05396B;
+    z-index: 1;
+    
+}
+
+.header-home{ 
+    padding: 2em;
+}
+
+.menu{
+    padding-top: 2em;
+    display: flex;
+    flex-basis: 100%;
+    flex-basis: content;
+}
+
+.menu li{
+    justify-content: space-between;
+    margin-left: 6em;
+    margin-right: 6em;
+}
+
+.menu li a{
+    display: inline-block;
+    
+}
+
+/*The menu button is displayed when opened with MOBILE, but will be replaced by a Login button when
+displayed in larger screens.*/
+
+.dropbtn{
+    background-color: #FF6EC7; 
+    color: whitesmoke;
+    margin-right: 0.8em;
+    padding: 1em;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+  
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #FFF9E9;
+    justify-content: center;
+    text-align: center;
+    min-width: 7.5em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}    
+.dropdown{
+    
+    color: white;
+    margin: 1em;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content a {
+  color: black;
+  background-color: #FFF9E9;
+  justify-content: center;
+  padding: 1em 1em;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #0077B6;}
+
+footer{
+    position: static;
+    width: 100%;
+    height: 8vh;
+    background-color: #90E0EF;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+em{
+    color: black;
+}
+
+/* Part 2: this is the starting point for the particular code for every page.*/
+
+
+
+.computer{
+    display: none;
+}
+
+h2{
+    font-size: 1em;
+}
+
+.picture{
+    max-width: 80%;
+    outline: 0.3em solid whitesmoke;
+}
+.picture:hover{
+    outline: 0.6em solid #FF6EC7;
+}
+
+/*The pictures and module titles were displayed using grid and all the elements received one specific extra class to facilitate it.*/
+
+table{
+    font-size:xx-small;
+    width: 70%;
+    border-collapse: collapse;
+    border-style: double;
+    border: 0.2em solid #05396B;
+    border-radius: 2%;
+    background-color: #FF6EC7;
+}
+td, th, tr{
+    border: 0.2em solid #05396B;
+    border-radius: 2%;
+    background-color: white;
+}
+
+.table-a{
+    color: black;
+}
+
+.container{
+    max-width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em 2em;
+    padding: 1em;
+    margin: 1em;
+    
+}
+
+.container div{
+    align-self: center;
+}
+
+.item1 h1{
+    color: #05396B;
+}
+
+.item1{
+    background-color:cadetblue;
+    padding: 0 2em 1em 2em ;
+}
+
+iframe{
+    max-width: 100%;
+}
+
+.item3, .item4{
+    margin-left: 1.8em;
+}
+
+#submitNotes, #questions{
+    margin-left: 3.5em;
+    margin-bottom: 1em;
+}
+
+/*The code displayed from line 207 to 229 was based on a combination of tips displayed in a chat.*/
+
+[data-tooltip] {
+    position: relative;
+    font-weight: bold;
+  }
+  
+
+  [data-tooltip]:after {
+    font-size: 0.4em;
+    display: none;
+    position: absolute;
+    top: -1em;
+    padding: 1em;
+    border-radius: 0.2em;
+    nav-down: auto;
+    content: attr(data-tooltip);
+    white-space: nowrap;
+    background-color: whitesmoke;
+    color: #023E8A;
+  }
+  
+  [data-tooltip]:hover:after {
+    display: block;
+  }
+
+
+@media only screen and ( min-width: 768px) {
+
+    .computer{
+        display: inline-block;
+    }
+
+    .mobile{
+        display: none;
+    }    
+    
+    .dropdown-content .mobile{
+        display: none;
+    }
+
+    header{
+        position: fixed;
+        min-width: 100%;
+        top: 0;
+    }
+
+    table{
+        font-size: smaller;
+        float: right;
+    }
+    td, th, tr{
+        border: 0.2em solid #05396B;
+        border-radius: 2%;
+        background-color: white;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns:  10% 30% 30% auto;
+        margin-top: 5em;
+        padding: 4em;
+        grid-gap: 3em;
+        column-gap: 5em;
+        
+    }
+
+    .item1{
+        float: left;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 1/2;
+    }
+    
+    .item2{
+        float: right;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row: 1/2;
+    }
+
+    .item3{
+        float: left;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2/3;
+    }
+
+    .item4{
+        float: right;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row: 2/3;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+
+    .picture{
+    max-width: 60%;
+    }   
+
+}
+/*Colors #FFB400 orange, #FFF9E9 Beige , #5A8100 Swampgreen, #FF6C02 */
+/*Colors #239148
+#89ad3f
+#096191 Navy
+#f29416
+#ffe13b
+dark blue #023E8A, medium blue #0077B6, light blue #90E0EF, pale blue #CAF0F8, neon pink #FF6EC7, 
+.main{
+    display: grid;
+
+}
+
+.loginOnmenu{
+    display: none;
+}
+.login{
+    background-color: #5A8100;
+    color: whitesmoke;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
